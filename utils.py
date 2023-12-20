@@ -312,7 +312,8 @@ def visualize_dist_cat(
     sort_alphabetically: bool = True,
 ) -> None:
     """
-    Visualizes the distribution of employees in a specified categorical column in a given pandas dataframe using a countplot and a pie chart.
+    Visualizes the distribution of employees in a specified categorical column in a given pandas dataframe using a countplot
+    and a pie chart.
 
     Args:
         df (pd.DataFrame): The pandas dataframe containing the specified column.
@@ -455,7 +456,8 @@ def visualize_dist_num(
     colors: list[str] = ["#E7E7E7", "#C7C7C7"],
 ) -> None:
     """
-    Visualizes the distribution of employees in a specified numerical column of a given pandas dataframe using a histogram plot.
+    Visualizes the distribution of employees in a specified numerical column of a given pandas dataframe using a histogram
+    plot.
 
     Args:
         df (pd.DataFrame): The pandas dataframe containing the specified column.
@@ -554,7 +556,8 @@ def visualize_dist_vs(
     colors: list[str] = ["#E7E7E7", "#FF8A80"],
 ) -> None:
     """
-    Visualizes the distribution of employees in a categorical or numerical column of a given pandas dataframe with respect to the "left" (target) variable.
+    Visualizes the distribution of employees in a categorical or numerical column of a given pandas dataframe with respect
+    to the "left" (target) variable.
 
     Args:
         df (pd.DataFrame): The pandas dataframe containing the specified column.
