@@ -1,0 +1,67 @@
+[tool.black]
+exclude = '''
+(
+    ^/(
+        \.git
+        | \.mypy_cache
+        | build
+        | dist
+        | venv
+    )/
+    | \.pytest_cache/
+    | __pycache__/
+)
+'''
+line-length = 125
+target-version = ["py310"]
+verbose = false
+
+[tool.commitizen]
+major_version_zero = true
+name = "cz_conventional_commits"
+tag_format = "$version"
+update_changelog_on_bump = true
+version = "0.1.0"
+version_type = "semver"
+
+[tool.flake8]
+count = true
+exclude = [".git", ".mypy_cache", ".pytest_cache", "__pycache__", "build", "dist", "venv"]
+indent-size = 4
+max-complexity = 18
+max-line-length = 125
+select = ["B", "C", "E", "F", "W", "B9", "C90", "T4"]
+statistics = true
+verbose = false
+
+[tool.isort]
+import_headings = {future = "Future modules", stdlib = "Standard library modules", thirdparty = "Third-party modules", firstparty = "First-party modules", localfolder = "Local modules"}
+include_trailing_comma = true
+line_length = 125
+multi_line_output = 3
+py_version = 310
+skip = [".git", ".mypy_cache", ".pytest_cache", "__pycache__", "build", "dist", "venv"]
+use_parentheses = true
+
+[tool.mypy]
+check_untyped_defs = true
+exclude = '''
+(
+    ^/(
+        \.git
+        | \.mypy_cache
+        | build
+        | dist
+        | venv
+    )/
+    | \.pytest_cache/
+    | __pycache__/
+)
+'''
+ignore_missing_imports = true
+python_version = "3.10"
+show_column_numbers = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_unused_ignores = true
+warn_unused_configs = true
